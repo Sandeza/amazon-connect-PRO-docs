@@ -6,13 +6,37 @@ Open the AWS Connect instance setup page and go to `Application integration` tab
 
 > https://ccp.arta.sandeza.io
 
-## Lambda
+## Lambda Setup
 
-### Setup
+### Adding layers
 
-Create new lambda function with basic execution permission with runtime `Node 12.x`  and copy the code from the <a href="https://github.com/Sandeza/arta-freshdesk-integration-lambda" target="_blank">repo</a>.
+Select `layers` on the sidemenu and click `Create Layer` button
+
+![create_layer](images/create_layer.png)
+
+Download the layer files from <a href="https://lambda-layers-1h8d3.s3.ap-south-1.amazonaws.com/freshdesk-integration-layer.zip" target="_blank">S3 link</a>
+
+![layer_configuration](images/layer_configuration.png)
+
+Fillout the fields as required and upload the ZIP file which downloaded before. Select `Node 12.x` as runtime and create the layer.
+
+### Creating Lambda
+
+Create new lambda function with basic execution permission with runtime `Node 12.x`  and copy the code from the <a href="https://github.com/Sandeza/arta-freshdesk-integration-lambda" target="_blank">Github repo</a>.
 
 > Note : Lambda and AWS Connect instance should be in same region
+
+Add layers to lambda by selecting `Layers` under `Designer` tab and click `Add a layer` button as shown below
+
+![add_layer](images/add_layer.png)
+
+Select the layer which you have created before and the layer version then click Add button
+
+![select_layer](images/select_layer.png)
+
+Now the layer was added to lambda as shown below
+
+![layer_added](images/layer_added.png)
 
 Add the environment variables as shown in below image
 

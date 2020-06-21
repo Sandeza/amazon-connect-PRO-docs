@@ -49,21 +49,13 @@ Arta Connector blends Amazon Connect and Freshdesk in a perfect way so both the 
 - **Freshdesk API Key** - Enter your Freshdesk API Key. 
     > **Important** : Respective user of API Key which was provided should have access to create ticket.
 
-- **Email Id** - Enter your Email id which you prefered for further communication.
 
-- **Phonenumber** - Enter your Phonenumber which you prefered for further communication.
-    > **Important** : Should start with `+` followed by `country code`
+Once you filled all mandotery fields proceed to Install
 
-    ```text
-    eg : +19876543210
-    ```
-
-Once you filled all mandotery fields then click `Verify button` after the success response proceed to Install
-
-### Arta Connector Installation
+<!-- ### Arta Connector Installation
 
 ![Arta Connector Installation](images/installArtaConnecter.png "Arta Connector Installation")
 
 - **Integration Id** - Enter Arta Freshdesk integration id. You find your Freshdesk integration id in arta platform under Freshdesk Integrations
 
-- **Access Key** - Enter Arta Freshdesk access key. You find your Freshdesk access key in arta platform under Freshdesk Integrations
+- **Access Key** - Enter Arta Freshdesk access key. You find your Freshdesk access key in arta platform under Freshdesk Integrations -->
