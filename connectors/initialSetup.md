@@ -40,7 +40,7 @@ Now the layer was added to lambda as shown below
 
 Add the environment variables as shown in below image
 
-> Note : Don't include `https://` in API_URL
+> Note : Include `https://` in beginning and don't include `/` at last
 
 ![env_variables](images/env_variables.png)
 
