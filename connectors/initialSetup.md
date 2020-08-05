@@ -2,9 +2,11 @@
 
 ## Domain Whitelist
 
-Open the AWS Connect instance setup page and go to `Application integration` tab then whitelist the below domain
+Open the AWS Connect instance setup page and go to `Application integration` tab then whitelist the following domains
 
-> https://ccp.arta.sandeza.io
+> https://ccp.arta.sandeza.io \
+> https://d3h0owdjgzys62.cloudfront.net \
+> Your freshdesk URL **eg : https://sandeza-support.freshdesk.com**
 
 ## Lambda Setup
 
