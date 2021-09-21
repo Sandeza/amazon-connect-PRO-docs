@@ -18,22 +18,22 @@ The Freshdesk Support Desk + Amazon Connect integration brings the power of Conn
  - Saving unknown numbers into contacts module
  - Converting a call conversation to a ticket in Freshdesk
  - Adding notes related to a conversation
-![FreshdeskCCP](images/freshdeskccp.png)
+![FreshdeskCCP](/images/freshdeskccp.png)
 
 
 ### The full page app allows agents to extend their capabilities by:
 
  - Using Live Transcribe and Live Translate features
-![fullpage_Transcribe](images/fullpageapp1.png)
+![fullpage_Transcribe](/images/fullpageapp1.png)
 
-![fullpage_Transcribe](images/fullpageapp2.png)
+![fullpage_Transcribe](/images/fullpageapp2.png)
 
  - Connecting with customer through Chats
-![fullpage_Transcribe](images/fullpageapp3.png)
+![fullpage_Transcribe](/images/fullpageapp3.png)
 
 
  - Making planned Auto-call outs to customers
-![fullpage_Transcribe](images/fullpageapp4.png)
+![fullpage_Transcribe](/images/fullpageapp4.png)
 
 
 
