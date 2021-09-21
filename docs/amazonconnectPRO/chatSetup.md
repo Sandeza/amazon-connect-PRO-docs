@@ -40,8 +40,34 @@ Set Disconnect Flow block.
 
 To setup Customer side chat widget refer below: 
 
-GITHUB LINK: <a href="https://github.com/amazon-connect/amazon-connect-chat-ui-examples/tree/master/cloudformationTemplates/startChatContactAPI">Customer Chat Widget Setup </a>
+ - First, you need deploy the backend API as instructed in the below links.
+    
+GITHUB LINK: <a href="https://github.com/amazon-connect/amazon-connect-chat-ui-examples/tree/master/cloudformationTemplates/startChatContactAPI">startChatContactAPI</a> and <a href="https://github.com/amazon-connect/amazon-connect-chat-ui-examples/tree/master/cloudformationTemplates/startChatContactAPI#cloudformation-deployment-steps">CloudFormation Deployment Steps</a>
 
+  
+ - Once your stack is deployed, go to the API Gateway console, select the API, go to the Stages menu item, and select the Prod stage. You will then see the Invoke URL. This is the URL you will invoke to start the chat.
+  
+ - Gather the instance ID and contact flow ID you want to use.You can find these IDs when viewing a contact flow.
+ - Download the <a href="https://github.com/Sandeza/AmazonConnectPRO-Installations/tree/master/AmazonconnectPRO-Chat"> AmazonconnectPRO-Chat</a> and save it locally.
+ - Open `index.html` file and change the `region`, `apiGatewayEndpoint` with the newly created API Gateway ID, `contactFlowId`, `instanceId` from the previous steps
+  
+                     connect.ChatInterface.initiateChat({
+                            name: customerName,
+                            username: "user_" + customerName,
+                            region: "us-east-1",
+                            apiGatewayEndpoint: "https://xxxxxxxx.execute-api.us-east-1.amazonaws.com/Prod/",
+                            contactAttributes: JSON.stringify({
+                                "customerName": customerName,
+                                "customerEmail": email
+                            }),
+                            contactFlowId: "xxxxxx-xxxx-xxxx-xxxx-xxxxxxxxx",
+                            instanceId: "xxxxxx-xxxx-xxxx-xxxxxxxxx"
+                        }, successHandler, failureHandler)
+
+ - At this point you can open the `index.html` to test chat by entering your Name and Phonenumber.
+ - For Creating you own Chat User Experience refer : <a href="https://github.com/amazon-connect/amazon-connect-chat-ui-examples/tree/master/cloudformationTemplates/startChatContactAPI#creating-your-own-chat-ux">creating-your-own-chat-ux</a> 
+
+  
 
 
 
