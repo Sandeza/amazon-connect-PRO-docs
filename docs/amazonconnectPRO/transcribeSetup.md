@@ -7,6 +7,8 @@ GitHub Link : <a href = "https://github.com/amazon-connect/amazon-connect-realti
 ## After completing the setup:
 
 Create two lambda functions `customerTranscriber` and `agentTranscriber` using the deployment package.
+
+Link: <a href="https://github.com/Sandeza/AmazonConnectPRO-Installations/tree/master/transcribe">Transcribe lambda </a>
   
  - Set the following values for the environment variables :
   - WEBSOCKET_URL (The https URL of the webscoket we are going to create)
@@ -31,7 +33,10 @@ Websocket is used to stream transcription and translation from Amazon connect to
 - Create a table "socketConnections" for storing the socket connections with hash as connectionId . 
 - Create a table connectionDetails with Hash as ContactId and sort key as connectionId
 ### Lambda Creation
-- Create 3 lambda's connect_handler , disconnect_handler, on_message_handler using the given deployment packages.
+Create 3 lambda's `connect_handler`, `disconnect_handler` and `on_message_handler` using the given deployment packages.
+
+ Link: <a href="https://github.com/Sandeza/AmazonConnectPRO-Installations/tree/master/transcribe/websocket">Websocket lambda </a>
+
 - Set socketConnections table name for the environment variable SOCKET_CONNECTIONS_TABLE_NAME in connect_handler and disconnect_handler.
 ​
 - Set connectionDetailstable name for the environment variable CONNECTION_DETAILS_TABLE_NAME in on_message_handler.

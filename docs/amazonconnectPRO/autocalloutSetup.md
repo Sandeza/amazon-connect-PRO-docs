@@ -10,7 +10,9 @@
 ​
 ### Creating Lambda's
 ​
-- Create 2 Lambda's AutoCaller and AutoCallout.
+Create 2 Lambda's AutoCaller and AutoCallout from the link below
+  
+ Link: <a href="https://github.com/Sandeza/AmazonConnectPRO-Installations/tree/master/autocallout">Auto Callout lambda </a>
 - Set environment variable for the lambda AutoCaller with callerData as key and give the Dynamo DB table name as the value.
 - Set environment variable for the lambda AutoCallout with callerData as key and give the Dynamo DB table name as the value. 
 - Set another environment variable for the lambda AutoCallout with sourceNumber as key and give the amazon connect phone number that will be used to make calls.

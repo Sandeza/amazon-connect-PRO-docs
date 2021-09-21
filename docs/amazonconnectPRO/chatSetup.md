@@ -48,7 +48,7 @@ GITHUB LINK: <a href="https://github.com/amazon-connect/amazon-connect-chat-ui-e
  - Once your stack is deployed, go to the API Gateway console, select the API, go to the Stages menu item, and select the Prod stage. You will then see the Invoke URL. This is the URL you will invoke to start the chat.
   
  - Gather the instance ID and contact flow ID you want to use.You can find these IDs when viewing a contact flow.
- - Download the <a href="https://github.com/Sandeza/AmazonConnectPRO-Installations/tree/master/AmazonconnectPRO-Chat"> AmazonconnectPRO-Chat</a> and save it locally.
+ - Download the <a href="https://github.com/Sandeza/AmazonConnectPRO-Installations/tree/master/chat">chat</a> and save it locally.
  - Open `index.html` file and change the `region`, `apiGatewayEndpoint` with the newly created API Gateway Endpoint, `contactFlowId`, `instanceId` from the previous steps
   
                      connect.ChatInterface.initiateChat({
