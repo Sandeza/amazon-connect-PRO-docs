@@ -1,12 +1,50 @@
 # Chat Setup
 
+
+## Lambda Setup
+
+### Adding layers
+
+Select `layers` on the sidemenu and click `Create Layer` button
+
+![create_layer](/images/create_layer.png)
+
+Download the layer files from <a href="https://lambda-layers-1h8d3.s3.ap-south-1.amazonaws.com/freshdesk-integration-layer.zip" target="_blank">S3 link</a>
+
+![layer_configuration](/images/layer_configuration.png)
+
+Fillout the fields as required and upload the ZIP file which downloaded before. Select `Node 14.x` as runtime and create the layer.
+
+Create new lambda function with basic execution permission with runtime `Node 14.x`  and copy the code from the <a href="https://github.com/Sandeza/AmazonConnectPRO-Installations/blob/master/chat/lambda" target="_blank">Github repo</a>.
+
+> Note : Lambda and AWS Connect instance should be in same region
+
+Add layers to lambda by selecting `Layers` under `Designer` tab and click `Add a layer` button as shown below
+
+![add_layer](/images/add_layer.png)
+
+Select the layer which you have created before and the layer version then click Add button
+
+![select_layer](/images/select_layer.png)
+
+Now the layer will get added to lambda as shown below
+
+![layer_added](/images/layer_added.png)
+
+Add the environment variables as shown in below image
+
+> Note : Include `https://` in beginning and don't include `/` at last
+
+![env_variables](/images/env_variables.png)
+
+
 ## Contact Flow Setup
 
 As show in the below image create a contact flow in Amazon Connect. 
 
 ![chat_contactflow](/images/chat_contactflow.png)
 
-Open the lambda block and select the same lambda used in initial setup then change the Timeout to 8sec.
+Open the lambda block and select the lambda created in the previous steps and then change the Timeout to 8sec.
 
 ![add_layer](/images/add_layer.png)
 
