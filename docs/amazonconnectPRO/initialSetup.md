@@ -69,5 +69,4 @@ Open the Set contact attribute block and give same Destination key and Attribute
 ![contact_flow](/images/set_contact_attribute.png)
 
 
-## Freshdesk Installation Settings 
 
