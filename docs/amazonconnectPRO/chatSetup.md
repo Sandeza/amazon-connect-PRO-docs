@@ -46,8 +46,6 @@ As show in the below image create a contact flow in Amazon Connect.
 
 Open the lambda block and select the lambda created in the previous steps and then change the Timeout to 8sec.
 
-![add_layer](/images/add_layer.png)
-
 Open the Set Contact Attributes block add Destination type and Destination Attribute as `customerInfo` and type as `External`
 
 ![chat_setcontactattributes](/images/chat_contactattributes_customerinfo.png)
@@ -78,9 +76,10 @@ Set Disconnect Flow block.
 
 To setup Customer side chat widget refer below: 
 
- - First, you need deploy the backend API as instructed in the below links.
-    
-GITHUB LINK: <a href="https://github.com/amazon-connect/amazon-connect-chat-ui-examples/tree/master/cloudformationTemplates/startChatContactAPI">startChatContactAPI</a> and <a href="https://github.com/amazon-connect/amazon-connect-chat-ui-examples/tree/master/cloudformationTemplates/startChatContactAPI#cloudformation-deployment-steps">CloudFormation Deployment Steps</a>
+ - First, you need to create a stack in CloudFormation with the template from the below link.
+
+GITHUB LINK : <a href="https://github.com/Sandeza/AmazonConnectPRO-Installations/blob/master/chat/chat-stack/chat-cloudformation-template">CloudFormation Template Chat</a>
+<!-- GITHUB LINK: <a href="https://github.com/amazon-connect/amazon-connect-chat-ui-examples/tree/master/cloudformationTemplates/startChatContactAPI">startChatContactAPI</a> and <a href="https://github.com/amazon-connect/amazon-connect-chat-ui-examples/tree/master/cloudformationTemplates/startChatContactAPI#cloudformation-deployment-steps">CloudFormation Deployment Steps</a> -->
 
   
  - Once your stack is deployed, go to the API Gateway console, select the API, go to the Stages menu item, and select the Prod stage. You will then see the Invoke URL. This is the URL you will invoke to start the chat.

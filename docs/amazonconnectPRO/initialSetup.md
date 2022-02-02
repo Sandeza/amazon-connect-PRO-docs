@@ -5,7 +5,7 @@
 Open the AWS Connect instance setup page and go to `Approved Origins` tab then whitelist the following domains
 
 > https://freshdeskccpv2.arta.sandeza.io \
-> https://d3h0owdjgzys62.cloudfront.net \
+> https://d28cm9p12gl0xb.cloudfront.net \
 > Your freshdesk URL **eg : https://sandeza-support.freshdesk.com**
 
 ## Lambda Setup
@@ -67,3 +67,7 @@ Open the Set contact attribute block and give same Destination key and Attribute
 >Note : Dont't change Destination key and Attribute value
 
 ![contact_flow](/images/set_contact_attribute.png)
+
+
+## Freshdesk Installation Settings 
+

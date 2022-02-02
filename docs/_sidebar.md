@@ -10,3 +10,4 @@
    - [Transcribe Setup](amazonconnectPRO/transcribeSetup.md)
    - [Chat Setup](amazonconnectPRO/chatSetup.md)
    - [AutoCallout Setup](amazonconnectPRO/autocalloutSetup.md)
+   - [Installation Parameters](amazonconnectPRO/InstallationParamters.md)
