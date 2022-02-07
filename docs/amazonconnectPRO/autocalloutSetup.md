@@ -11,12 +11,14 @@
 ### Creating Lambda's
 ​
 Create 3 Lambda's AutoCaller, AutoCallout and CallerDetails from the link below
+
+>Note: Create the lambdas with `python3.9` as runtime.
   
  Link: <a href="https://github.com/Sandeza/AmazonConnectPRO-Installations/tree/master/autocallout">Auto Callout lambda </a>
-- Set environment variable for the lambda AutoCaller with callerData as key and give the Dynamo DB table name as the value.
-- Set environment variable for the lambda AutoCallout with callerData as key and give the Dynamo DB table name as the value. 
-- Set another environment variable for the lambda AutoCallout with sourceNumber as key and give the amazon connect phone number that will be used to make calls.
-- Set environment variable for the lambda CallerDetails with callerData as key and give the Dynamo DB table name as the value.
+- Set environment variable for the lambda fd-AutoCaller with callerData as key and give the Dynamo DB table name as the value.
+- Set environment variable for the lambda fd-AutoCallout with callerData as key and give the Dynamo DB table name as the value. 
+- Set another environment variable for the lambda AutoCallout with sourceNumber as key and give the amazon connect phone number that will be used to make outbound calls.
+- Set environment variable for the lambda fd-CallerDetails with callerData as key and give the Dynamo DB table name as the value.
 ​
 ### API Gateway
 ​

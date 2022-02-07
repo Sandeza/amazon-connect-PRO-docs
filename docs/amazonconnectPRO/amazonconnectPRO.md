@@ -8,9 +8,9 @@ Amazon Connect is an easy to use cloud contact center that helps you provide sup
 The Freshdesk Support Desk + Amazon Connect integration brings the power of Connect right within Freshdesk. Agents can now engage with their customers through Amazon Connect’s Call and Chat channels without having to move out of Freshdesk. The integration also gives additional context to agents in terms of previous chat, call or ticket histories raised in Freshdesk so that they can have more contextual and effective interactions. 
 
 ### The custom app has two parts 
-####   (i) a small modal and
+####   (i) a Contact Control Panel 
 ####   (ii) a full page app. 
-####   The small modal allows basic call functionality including the following:
+####   The CCP (Contact Control Panel) allows basic call functionality including the following:
 
  - Accepting incoming calls and chats
  - Making outbound calls

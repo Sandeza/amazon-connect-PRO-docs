@@ -1,7 +1,44 @@
 # Chat Setup
+## Customer Chat Widget Setup 
+
+To setup Customer side chat widget refer below: 
+
+ - First, you need to create a stack in CloudFormation with the template from the below link.
+
+GITHUB LINK : <a href="https://github.com/Sandeza/AmazonConnectPRO-Installations/blob/master/chat/chat-stack/chat-cloudformation-template">CloudFormation Template Chat</a>
+ - Gather the instance ID and contact flow ID you want to use.You can find these IDs when viewing a contact flow.
+  
+ - Enter the Contact Flow ID and Instance ID in the Cloud Formation Setup when required. 
+ 
+ - Once your stack is deployed, go to the API Gateway console, select the API, go to the Stages menu item, and select the Prod stage. You will then see the Invoke URL. This is the URL you will invoke to start the chat.
+  
+ 
+ - Download the <a href="https://github.com/Sandeza/AmazonConnectPRO-Installations/tree/master/chat">chat</a> and save it locally.
+ - Open `index.html` file and change the `region`, `apiGatewayEndpoint` with the newly created API Gateway Endpoint, `contactFlowId`, `instanceId` from the previous steps
+  
+                     connect.ChatInterface.initiateChat({
+                            name: customerName,
+                            username: "user_" + customerName,
+                            region: "xxxxxxx",
+                            apiGatewayEndpoint: "xxxxxxxx",
+                            contactAttributes: JSON.stringify({
+                                "customerName": customerName,
+                                "customerEmail": email
+                            }),
+                            contactFlowId: "xxxxxx-xxxx-xxxx-xxxx-xxxxxxxxx",
+                            instanceId: "xxxxxx-xxxx-xxxx-xxxxxxxxx"
+                        }, successHandler, failureHandler)
+
+ - At this point you can open the `index.html` to test chat by entering your Name and Phonenumber.
+ - For creating you own Chat User Experience refer : <a href="https://github.com/amazon-connect/amazon-connect-chat-ui-examples/tree/master/cloudformationTemplates/startChatContactAPI#creating-your-own-chat-ux">creating-your-own-chat-ux</a> 
 
 
-## Lambda Setup
+ - Once the Stack is created successfully, the required Lambda's and API Gateway url will be created.
+
+ - Go to the startChatContactStack lambda with the description `AWS Lambda Function to initiate the chat with the end user` and replace the code with the updated changes in the `startChatContactStack-updatedChanges.zip` zip file  from the <a href="https://github.com/Sandeza/AmazonConnectPRO-Installations/tree/master/chat/lambda">GITHUB LINK</a>
+
+
+## Lambda Setup to show Freshdesk Tickets and Contacts 
 
 ### Adding layers
 
@@ -72,37 +109,7 @@ Set Transfer to Queue Block.
 
 Set Disconnect Flow block. 
 
-## Customer Chat Widget Setup 
 
-To setup Customer side chat widget refer below: 
-
- - First, you need to create a stack in CloudFormation with the template from the below link.
-
-GITHUB LINK : <a href="https://github.com/Sandeza/AmazonConnectPRO-Installations/blob/master/chat/chat-stack/chat-cloudformation-template">CloudFormation Template Chat</a>
-<!-- GITHUB LINK: <a href="https://github.com/amazon-connect/amazon-connect-chat-ui-examples/tree/master/cloudformationTemplates/startChatContactAPI">startChatContactAPI</a> and <a href="https://github.com/amazon-connect/amazon-connect-chat-ui-examples/tree/master/cloudformationTemplates/startChatContactAPI#cloudformation-deployment-steps">CloudFormation Deployment Steps</a> -->
-
-  
- - Once your stack is deployed, go to the API Gateway console, select the API, go to the Stages menu item, and select the Prod stage. You will then see the Invoke URL. This is the URL you will invoke to start the chat.
-  
- - Gather the instance ID and contact flow ID you want to use.You can find these IDs when viewing a contact flow.
- - Download the <a href="https://github.com/Sandeza/AmazonConnectPRO-Installations/tree/master/chat">chat</a> and save it locally.
- - Open `index.html` file and change the `region`, `apiGatewayEndpoint` with the newly created API Gateway Endpoint, `contactFlowId`, `instanceId` from the previous steps
-  
-                     connect.ChatInterface.initiateChat({
-                            name: customerName,
-                            username: "user_" + customerName,
-                            region: "xxxxxxx",
-                            apiGatewayEndpoint: "xxxxxxxx",
-                            contactAttributes: JSON.stringify({
-                                "customerName": customerName,
-                                "customerEmail": email
-                            }),
-                            contactFlowId: "xxxxxx-xxxx-xxxx-xxxx-xxxxxxxxx",
-                            instanceId: "xxxxxx-xxxx-xxxx-xxxxxxxxx"
-                        }, successHandler, failureHandler)
-
- - At this point you can open the `index.html` to test chat by entering your Name and Phonenumber.
- - For creating you own Chat User Experience refer : <a href="https://github.com/amazon-connect/amazon-connect-chat-ui-examples/tree/master/cloudformationTemplates/startChatContactAPI#creating-your-own-chat-ux">creating-your-own-chat-ux</a> 
 
   
 

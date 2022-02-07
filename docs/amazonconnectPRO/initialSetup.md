@@ -4,7 +4,7 @@
 
 Open the AWS Connect instance setup page and go to `Approved Origins` tab then whitelist the following domains
 
-> https://freshdeskccpv2.arta.sandeza.io \
+> https://d3h0owdjgzys62.cloudfront.net \
 > https://d28cm9p12gl0xb.cloudfront.net \
 > Your freshdesk URL **eg : https://sandeza-support.freshdesk.com**
 

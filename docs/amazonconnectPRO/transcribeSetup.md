@@ -7,6 +7,7 @@ GitHub Link : <a href = "https://github.com/amazon-connect/amazon-connect-realti
 ## After completing the setup:
 
 Create two lambda functions `customerTranscriber` and `agentTranscriber` using the deployment package.
+>Note: Create the Lambdas using `Node 14.x` runtime
 
 Link: <a href="https://github.com/Sandeza/AmazonConnectPRO-Installations/tree/master/transcribe">Transcribe lambda </a>
   
@@ -34,6 +35,7 @@ Websocket is used to stream transcription and translation from Amazon connect to
 - Create a table connectionDetails with Hash as ContactId and sort key as connectionId
 ### Lambda Creation
 Create 3 lambda's `connect_handler`, `disconnect_handler` and `on_message_handler` using the given deployment packages.
+>Note: Create the lambdas with Runtime `python 3.9`
 
  Link: <a href="https://github.com/Sandeza/AmazonConnectPRO-Installations/tree/master/transcribe/websocket">Websocket lambda </a>
 
